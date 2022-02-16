@@ -1,4 +1,8 @@
 
+function game() {
+
+for (let i = 0; i < 5; i++) {
+
 let randomNumber = (Math.floor(Math.random()*3) + 1);
 
 function computerPlay() {
@@ -31,25 +35,42 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-
 let playerSelection = playerPlay();
 let computerSelection = computerPlay();
 
 console.log(playRound(playerSelection, computerSelection));
 
+let playerWinRound = "Player wins.";
+let computerWinRound = "Player loses.";
+let tie = "It is a tie.";
+let playerWin = "You win! Congratulations!";
+let computerWin = "The Computer wins. Better luck next time.";
 
 
-function game() {
-
-    for (let i = 0; i < 5; i++) {
-   
-    playRound();
-
+function scoreBoard(result) {
+    if (result === playerWinRound) {
+        playerScore++;
+    } else if (result === computerWinRound) {
+        computerWinRound++;
+    } else {
+        tie++;
     }
 
-    let playerScore;
-    let computerScore;
+if playerScore === 5) {
+    console.log(playerWin);
+    return;
+}
+
+if computerScore === 5) {
+    console.log(computerWin);
+    return;
+}
 
 }
 
+}
+
+
 game();
+
+
