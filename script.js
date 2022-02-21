@@ -1,12 +1,15 @@
+function playRound() {
+
 let getUserChoice = userInput => {
     let userChoice = prompt("Please enter Rock, Paper, or Scissors");
     userChoice = userChoice.toLowerCase();
     if (userChoice === 'rock' || userChoice === 'paper' || userChoice === 'scissors') {
         return userChoice;
     } else {
-        return "Error!";
-    };
-};
+
+    }
+    
+}
 
 
 
@@ -19,8 +22,8 @@ let getComputerChoice = cpuInput => {
             return 'paper';
         case 3:
             return 'scissors';
-    };
-};
+    }
+}
 
 
 
@@ -57,10 +60,19 @@ function determineWinner(userChoice, computerChoice) {
         }
     }
 
-};
+}
 
 
 determineWinner(userChoice, computerChoice);
 console.log(determineWinner(userChoice, computerChoice));
 
+}
 
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        playRound();
+    }
+}
+
+game();
